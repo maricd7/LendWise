@@ -1,7 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next";
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const books = [
+import { Book } from "../types/Book";
+export const fetchData = async (): Promise<Book[]> => {
+  const books: Book[] = [
     {
       id: 1,
       title: "To Kill a Mockingbird",
@@ -11,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       isbn: "9780061120084",
       available: true,
       image: "https://example.com/images/to-kill-a-mockingbird.jpg",
-      lender: "John Doe"
+      lender: "John Doe",
     },
     {
       id: 2,
@@ -22,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       isbn: "9780451524935",
       available: false,
       image: "https://example.com/images/1984.jpg",
-      lender: "Jane Smith"
+      lender: "Jane Smith",
     },
     {
       id: 3,
@@ -33,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       isbn: "9780743273565",
       available: true,
       image: "https://example.com/images/the-great-gatsby.jpg",
-      lender: "Alice Johnson"
+      lender: "Alice Johnson",
     },
     {
       id: 4,
@@ -44,7 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       isbn: "9781503290563",
       available: true,
       image: "https://example.com/images/pride-and-prejudice.jpg",
-      lender: "Bob Brown"
+      lender: "Bob Brown",
     },
     {
       id: 5,
@@ -55,7 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       isbn: "9780316769488",
       available: false,
       image: "https://example.com/images/the-catcher-in-the-rye.jpg",
-      lender: "Mary Davis"
+      lender: "Mary Davis",
     },
     {
       id: 6,
@@ -65,7 +64,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Fantasy",
       isbn: "9780547928227",
       available: true,
-      image: "https://example.com/images/the-hobbit.jpg"
+      image: "https://example.com/images/the-hobbit.jpg",
+      lender: "Unknown",
     },
     {
       id: 7,
@@ -75,7 +75,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Adventure",
       isbn: "9781503280786",
       available: true,
-      image: "https://example.com/images/moby-dick.jpg"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "Unknown",
     },
     {
       id: 8,
@@ -85,7 +86,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Historical",
       isbn: "9781400079988",
       available: false,
-      lender: "Kevin Wilson"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "Kevin Wilson",
     },
     {
       id: 9,
@@ -95,7 +97,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Epic",
       isbn: "9780140268867",
       available: true,
-      lender: "Laura Martinez"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "Laura Martinez",
     },
     {
       id: 10,
@@ -105,7 +108,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Psychological Fiction",
       isbn: "9780486415871",
       available: true,
-      lender: "David Lee"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "David Lee",
     },
     {
       id: 11,
@@ -115,7 +119,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Romance",
       isbn: "9780141441146",
       available: true,
-      image: "https://example.com/images/jane-eyre.jpg"
+      image: "https://example.com/images/jane-eyre.jpg",
+      lender: "Unknown",
     },
     {
       id: 12,
@@ -125,7 +130,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Epic Poetry",
       isbn: "9780142437223",
       available: false,
-      lender: "Emma Taylor"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "Emma Taylor",
     },
     {
       id: 13,
@@ -135,7 +141,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Dystopian",
       isbn: "9780060850524",
       available: true,
-      image: "https://example.com/images/brave-new-world.jpg"
+      image: "https://example.com/images/brave-new-world.jpg",
+      lender: "Unknown",
     },
     {
       id: 14,
@@ -145,7 +152,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Epic",
       isbn: "9780140275360",
       available: true,
-      image: "https://example.com/images/the-iliad.jpg"
+      image: "https://example.com/images/the-iliad.jpg",
+      lender: "Unknown",
     },
     {
       id: 15,
@@ -155,7 +163,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Philosophical Fiction",
       isbn: "9780374528379",
       available: true,
-      image: "https://example.com/images/the-brothers-karamazov.jpg"
+      image: "https://example.com/images/the-brothers-karamazov.jpg",
+      lender: "Unknown",
     },
     {
       id: 16,
@@ -165,7 +174,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Gothic Fiction",
       isbn: "9780141439556",
       available: false,
-      lender: "Sophia Anderson"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "Sophia Anderson",
     },
     {
       id: 17,
@@ -175,7 +185,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Historical",
       isbn: "9780451419438",
       available: true,
-      image: "https://example.com/images/les-miserables.jpg"
+      image: "https://example.com/images/les-miserables.jpg",
+      lender: "Unknown",
     },
     {
       id: 18,
@@ -185,7 +196,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Adventure",
       isbn: "9780060934347",
       available: true,
-      image: "https://example.com/images/don-quixote.jpg"
+      image: "https://example.com/images/don-quixote.jpg",
+      lender: "Unknown",
     },
     {
       id: 19,
@@ -195,7 +207,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Literary Fiction",
       isbn: "9780140449129",
       available: false,
-      lender: "James Thomas"
+      image: "https://example.com/images/moby-dick.jpg",
+      lender: "James Thomas",
     },
     {
       id: 20,
@@ -205,9 +218,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       genre: "Philosophical Fiction",
       isbn: "9780141439570",
       available: true,
-      image: "https://example.com/images/the-picture-of-dorian-gray.jpg"
-    }
+      image: "https://example.com/images/the-picture-of-dorian-gray.jpg",
+      lender: "Unknown",
+    },
   ];
-
-  res.status(200).json(books);
-}
+  return books;
+};
