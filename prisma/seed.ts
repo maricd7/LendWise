@@ -1,4 +1,7 @@
 import { PrismaClient } from '@prisma/client';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const prisma = new PrismaClient();
 
@@ -204,20 +207,19 @@ const books = [
     lender: "Unknown",
   },
 ];
-
 async function main() {
-  for (const book of books) {
-    await prisma.book.create({
-      data: book,
-    });
+  try {
+    for (const book of books) {
+      await prisma.book.create({
+        data: book,
+      });
+    }
+    console.log("Seeding completed successfully.");
+  } catch (e) {
+    console.error("Error during seeding:", e);
+  } finally {
+    await prisma.$disconnect();
   }
 }
 
-main()
-  .catch((e) => {
-    console.error(e);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+main();
