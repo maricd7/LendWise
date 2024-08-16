@@ -10,6 +10,8 @@ const Recommended = () => {
     const fetchBooks = async () => {
       try {
         const data: Book[] = await fetchData();
+        console.log(data, "data");
+        console.log("dadfadasd");
         setBooks(data);
       } catch (error) {
         console.error("Failed to fetch books:", error);
