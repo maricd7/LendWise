@@ -13,7 +13,7 @@ const books = [
     genre: "Fiction",
     isbn: "9780061120084",
     available: true,
-    image: "https://example.com/images/to-kill-a-mockingbird.jpg",
+    image: "https://m.media-amazon.com/images/I/81aY1lxk+9L._AC_UF1000,1000_QL80_.jpg",
     lender: "John Doe",
   },
   {
@@ -23,7 +23,7 @@ const books = [
     genre: "Dystopian",
     isbn: "9780451524935",
     available: false,
-    image: "https://example.com/images/1984.jpg",
+    image: "https://www.harpercollins.com/cdn/shop/files/9780547249643_51db8c3c-1392-410d-96f5-902503f797a4_1600x.jpg",
     lender: "Jane Smith",
   },
   {
@@ -33,7 +33,7 @@ const books = [
     genre: "Classic",
     isbn: "9780743273565",
     available: true,
-    image: "https://example.com/images/the-great-gatsby.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg",
     lender: "Alice Johnson",
   },
   {
@@ -43,7 +43,7 @@ const books = [
     genre: "Romance",
     isbn: "9781503290563",
     available: true,
-    image: "https://example.com/images/pride-and-prejudice.jpg",
+    image: "https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_.jpg",
     lender: "Bob Brown",
   },
   {
@@ -53,7 +53,7 @@ const books = [
     genre: "Fiction",
     isbn: "9780316769488",
     available: false,
-    image: "https://example.com/images/the-catcher-in-the-rye.jpg",
+    image: "https://m.media-amazon.com/images/I/8125BDk3l9L._AC_UF1000,1000_QL80_.jpg",
     lender: "Mary Davis",
   },
   {
@@ -63,7 +63,7 @@ const books = [
     genre: "Fantasy",
     isbn: "9780547928227",
     available: true,
-    image: "https://example.com/images/the-hobbit.jpg",
+    image: "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -73,7 +73,7 @@ const books = [
     genre: "Adventure",
     isbn: "9781503280786",
     available: true,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -83,7 +83,7 @@ const books = [
     genre: "Historical",
     isbn: "9781400079988",
     available: false,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://m.media-amazon.com/images/I/71wXZB-VtBL._AC_UF1000,1000_QL80_.jpg",
     lender: "Kevin Wilson",
   },
   {
@@ -93,7 +93,7 @@ const books = [
     genre: "Epic",
     isbn: "9780140268867",
     available: true,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://m.media-amazon.com/images/I/81g0AATkO9L._AC_UF1000,1000_QL80_.jpg",
     lender: "Laura Martinez",
   },
   {
@@ -103,7 +103,7 @@ const books = [
     genre: "Psychological Fiction",
     isbn: "9780486415871",
     available: true,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://m.media-amazon.com/images/I/71O2XIytdqL._AC_UF1000,1000_QL80_.jpg",
     lender: "David Lee",
   },
   {
@@ -113,7 +113,7 @@ const books = [
     genre: "Romance",
     isbn: "9780141441146",
     available: true,
-    image: "https://example.com/images/jane-eyre.jpg",
+    image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1692725440i/197321006.jpg",
     lender: "Unknown",
   },
   {
@@ -123,7 +123,7 @@ const books = [
     genre: "Epic Poetry",
     isbn: "9780142437223",
     available: false,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://m.media-amazon.com/images/I/81SgX6pVaWL._AC_UF1000,1000_QL80_.jpg",
     lender: "Emma Taylor",
   },
   {
@@ -133,7 +133,7 @@ const books = [
     genre: "Dystopian",
     isbn: "9780060850524",
     available: true,
-    image: "https://example.com/images/brave-new-world.jpg",
+    image: "https://m.media-amazon.com/images/I/81zE42gT3xL._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -143,7 +143,7 @@ const books = [
     genre: "Epic",
     isbn: "9780140275360",
     available: true,
-    image: "https://example.com/images/the-iliad.jpg",
+    image: "https://m.media-amazon.com/images/I/71FVVdj9w4L._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -153,7 +153,7 @@ const books = [
     genre: "Philosophical Fiction",
     isbn: "9780374528379",
     available: true,
-    image: "https://example.com/images/the-brothers-karamazov.jpg",
+    image: "https://m.media-amazon.com/images/I/71OZJsgZzQL._AC_UF894,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -163,7 +163,7 @@ const books = [
     genre: "Gothic Fiction",
     isbn: "9780141439556",
     available: false,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://static.wikia.nocookie.net/classical-literature/images/e/e9/Wuthering-heights1.jpg",
     lender: "Sophia Anderson",
   },
   {
@@ -173,7 +173,7 @@ const books = [
     genre: "Historical",
     isbn: "9780451419438",
     available: true,
-    image: "https://example.com/images/les-miserables.jpg",
+    image: "https://m.media-amazon.com/images/I/71eQUDwCBfL._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -183,7 +183,7 @@ const books = [
     genre: "Adventure",
     isbn: "9780060934347",
     available: true,
-    image: "https://example.com/images/don-quixote.jpg",
+    image: "https://m.media-amazon.com/images/I/71mbJoazlCL._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
   {
@@ -193,7 +193,7 @@ const books = [
     genre: "Literary Fiction",
     isbn: "9780140449129",
     available: false,
-    image: "https://example.com/images/moby-dick.jpg",
+    image: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606770119i/2175.jpg",
     lender: "James Thomas",
   },
   {
@@ -203,7 +203,7 @@ const books = [
     genre: "Philosophical Fiction",
     isbn: "9780141439570",
     available: true,
-    image: "https://example.com/images/the-picture-of-dorian-gray.jpg",
+    image: "https://m.media-amazon.com/images/I/41XYp5hDDBL._AC_UF1000,1000_QL80_.jpg",
     lender: "Unknown",
   },
 ];

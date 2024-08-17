@@ -2,6 +2,7 @@
 import { fetchData } from "@/app/actions/FetchMockData";
 import React, { useEffect, useState } from "react";
 import { Book } from "@/app/types/Book";
+import Image from "next/image";
 
 const Recommended = () => {
   const [books, setBooks] = useState<Book[]>([]);
@@ -24,6 +25,7 @@ const Recommended = () => {
     <div>
       {books.map((book) => (
         <div key={book.id}>
+          <Image alt="book photo" src={book.image} width={180} height={360} />
           <h2>{book.title}</h2>
           <p>{book.author}</p>
         </div>
