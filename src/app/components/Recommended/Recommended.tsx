@@ -22,12 +22,23 @@ const Recommended = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-wrap gap-6">
       {books.map((book) => (
-        <div key={book.id}>
-          <Image alt="book photo" src={book.image} width={180} height={360} />
-          <h2>{book.title}</h2>
-          <p>{book.author}</p>
+        <div
+          key={book.id}
+          className="bg-gray-900 shadow-lg rounded-lg overflow-hidden p-4 hover:shadow-xl transition-shadow duration-300 flex flex-col"
+        >
+          <Image
+            alt="book photo"
+            src={book.image}
+            width={180}
+            height={360}
+            className="mx-auto"
+          />
+          <h2 className="mt-4 text-lg font-semibold text-center">
+            {book.title}
+          </h2>
+          <p className="text-sm text-gray-600 text-center">{book.author}</p>
         </div>
       ))}
     </div>
