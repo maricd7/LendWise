@@ -4,7 +4,9 @@ const RegisterPage: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-950">
+          Register
+        </h2>
         <form>
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700">
@@ -13,7 +15,7 @@ const RegisterPage: React.FC = () => {
             <input
               type="text"
               id="name"
-              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-gray-950 mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
           </div>
@@ -24,7 +26,7 @@ const RegisterPage: React.FC = () => {
             <input
               type="email"
               id="email"
-              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-gray-950  mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
           </div>
@@ -35,7 +37,7 @@ const RegisterPage: React.FC = () => {
             <input
               type="password"
               id="password"
-              className="mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className=" text-gray-950 mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
           </div>
