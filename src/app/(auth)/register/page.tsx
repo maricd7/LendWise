@@ -1,13 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { RegisterUser } from "@/app/actions/RegisterUser";
 
 const RegisterPage: React.FC = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleRegisterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const user = await RegisterUser(email, password, name);
+      console.log("User registered successfully:", user);
+    } catch (error) {
+      console.error("Registration failed:", error);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-950">
           Register
         </h2>
-        <form>
+        <form onSubmit={handleRegisterSubmit}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700">
               Name
@@ -17,6 +33,8 @@ const RegisterPage: React.FC = () => {
               id="name"
               className="text-gray-950 mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -28,6 +46,8 @@ const RegisterPage: React.FC = () => {
               id="email"
               className="text-gray-950  mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-4">
@@ -39,6 +59,8 @@ const RegisterPage: React.FC = () => {
               id="password"
               className=" text-gray-950 mt-1 w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <button
